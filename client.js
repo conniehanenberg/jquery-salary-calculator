@@ -88,7 +88,7 @@ totalannualsalary += Number("annualsalary")
 function deleteRow(event) {
     console.log('In delete row');
 
-let button = $(event.target);
+let Deletebutton = $(event.target);
 
 let targetRow = button.closest;
 
