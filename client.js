@@ -56,19 +56,21 @@ console.log(lastName);
 console.log(ID);
 console.log(jobTitle);
 console.log(annualSalary);
-}
+
 
 //create a new row
 const elem = $(`
 <tr>
-  <td>${'firstName'}</td>
-  <td>${'lastName'}</td>  
-   <td>${'ID'}</td>
-    <td>${'jobTitle'}</td>
-    <td>${'annualSalary'}</td>
+  <td>${"firstName"}</td>
+  <td>${"lastName"}</td>  
+   <td>${"ID"}</td>
+    <td>${"jobTitle"}</td>
+    <td>${"annualSalary"}</td>
     <td><button class="deleteEmployee">Delete</button></td>
  </tr> 
 `);
+
+$("table tbody").append(elem);
 
 //clear the input values
 $("#firstname").val('');
@@ -77,20 +79,22 @@ $("#ID").val('');
 $("#jobtitle").val('');
 $("#annualsalary").val('');
 
-$("table tbody").append(elem);
+}
+
 
 //update annual to montly cost
 function updateToMonthlySalary(){
 
 }
+
 let totalAnnualSalary = 0;
-totalAnnualSalary += Number(annualSalary);
+totalAnnualSalary += Number(`annualSalary`);
 
 
 $("#monthly-salary").text('Total Montlhy Salary $${monthlyCost}');
 
 ////add total salary in DOM
-const annualSalary = $("#annual-salary").val();
+//////////////////const annualSalary = $("#annual-salary").val();
 
 
 ///delete buttons
